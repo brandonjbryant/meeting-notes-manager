@@ -1,0 +1,280 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Modern, clean font */
+  background-color: #f9f9f9; /* Light gray background for a clean look */
+  color: #333; /* Dark text for readability */
+}
+
+.App {
+  text-align: left; /* Keep text aligned to the left */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the boxes horizontally */
+  max-width: 800px; /* Limit the width of the content */
+  margin: 0 auto; /* Center the app container itself */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header Styling */
+.App-header {
+  background-color: #1e293b; /* Dark slate blue for a modern look */
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-bottom: 30px;
+  text-align: center; /* Center the header text */
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Input Fields */
+input[type="text"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  max-width: 600px; /* Standardized width for all input fields */
+  padding: 12px 16px; /* Consistent padding */
+  margin: 15px auto; /* Center the box horizontally and add vertical spacing */
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 8px; /* Rounded corners for consistency */
+  font-size: 16px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for modern look */
+  text-align: left; /* Keep text inside the box aligned to the left */
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+  border-color: #4f46e5; /* Indigo border on focus */
+  outline: none;
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.3); /* Glow effect on focus */
+}
+
+/* Upload Transcript File */
+input[type="file"] {
+  max-width: 600px; /* Match the width of other input fields */
+  padding: 12px; /* Consistent padding */
+  margin-bottom: 15px; /* Add vertical spacing */
+  border: 2px solid #d1d5db; /* Light gray border */
+  border-radius: 8px; /* Match the border radius of other elements */
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for consistency */
+  text-align: left; /* Align text to the left */
+  cursor: pointer; /* Add a pointer cursor for interactivity */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Buttons */
+button {
+  background-color: #4f46e5; /* Indigo button */
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Adjusted padding for consistency */
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px; /* Match the border radius of other elements */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px;
+  max-width: 200px; /* Smaller width for buttons */
+  text-align: center; /* Center text inside the button */
+}
+
+button:hover {
+  background-color: #4338ca; /* Darker indigo on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+button:active {
+  background-color: #3730a3; /* Even darker indigo on click */
+  transform: scale(0.98); /* Slight shrink effect */
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  text-align: left; /* Align labels to the left */
+  max-width: 600px; /* Match the width of input fields */
+  margin: 0 auto 8px;
+  color: #1e293b; /* Dark slate blue for labels */
+}
+
+/* Drag-and-Drop Area */
+.dropzone {
+  border: 2px dashed #4f46e5; /* Indigo dashed border */
+  border-radius: 8px; /* Rounded corners for consistency */
+  padding: 20px; /* Adjusted padding for better spacing */
+  text-align: left; /* Keep text inside the box aligned to the left */
+  cursor: pointer;
+  background-color: #ffffff; /* White background */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  max-width: 600px; /* Match the width of other sections */
+  margin: 15px auto; /* Center the box horizontally and add vertical spacing */
+}
+
+.dropzone.active {
+  background-color: #eef2ff; /* Light indigo background when dragging files */
+  border-color: #4338ca; /* Darker indigo border */
+}
+
+.dropzone p {
+  font-size: 14px; /* Smaller font size for text */
+  color: #6b7280; /* Neutral gray text */
+  margin: 0; /* Remove extra margin */
+}
+
+/* Uploaded Files List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px auto; /* Center the list horizontally */
+  max-width: 600px; /* Match the width of other sections */
+}
+
+ul li {
+  font-size: 14px;
+  color: #374151; /* Dark gray text */
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb; /* Light gray divider */
+}
+
+/* Generated Notes Section */
+.Generated-notes {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff; /* White background for notes */
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 8px; /* Rounded corners for consistency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  max-width: 600px; /* Match the width of other sections */
+  margin: 0 auto; /* Center the box horizontally */
+  text-align: left; /* Keep text inside the box aligned to the left */
+}
+
+.Generated-notes h2 {
+  color: #4f46e5; /* Indigo heading for notes */
+  margin-bottom: 15px;
+}
+
+.Generated-notes pre {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for notes */
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151; /* Dark gray text */
+  white-space: pre-wrap; /* Preserve formatting */
+}
+
+/* Small Text */
+small {
+  color: #6b7280; /* Neutral gray text */
+  font-size: 12px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Generated-notes {
+  animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  input[type="text"],
+  textarea,
+  button {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .Generated-notes {
+    width: 90%;
+  }
+}
+
+/* Scrollable Container */
+.scrollable-container {
+  max-height: 300px; /* Limit the height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  margin-top: 20px;
+}
+
+.scrollable-container pre {
+  white-space: pre-wrap; /* Preserve formatting */
+  line-height: 1.6; /* Add spacing between lines */
+  font-size: 14px; /* Adjust font size */
+  color: #374151; /* Dark gray text */
+}
+
+@media (max-width: 768px) {
+  .scrollable-container {
+    max-height: 200px; /* Reduce height for smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .center-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  input, textarea, button {
+    width: 100%; /* Make inputs and buttons full-width */
+    margin-bottom: 10px; /* Add spacing */
+  }
+}
+
+/* Center Container */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 800px; /* Limit the width */
+}

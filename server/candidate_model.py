@@ -1,0 +1,1 @@
+#models/candidate_model.py: Data models for meeting notes.
