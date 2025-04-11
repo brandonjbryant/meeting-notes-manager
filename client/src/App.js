@@ -1,15 +1,20 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ThemeProvider, createTheme } from "@mui/material/styles"; // Import ThemeProvider and createTheme
+import CssBaseline from "@mui/material/CssBaseline"; // Optional: Normalize styles
 import Dashboard from "./pages/Dashboard";
-import './App.css';
+import "./App.css";
+
+// Create a default theme
+const theme = createTheme();
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-      </Routes>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <CssBaseline /> {/* Optional: Provides consistent baseline styles */}
+      <div>
+        <Dashboard />
+      </div>
+    </ThemeProvider>
   );
 }
 

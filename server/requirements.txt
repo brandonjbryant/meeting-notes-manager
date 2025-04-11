@@ -1,3 +1,10 @@
 fastapi
 uvicorn
 pydantic
+sqlalchemy
+python-dotenv
+slowapi
+transformers
+whisper @ git+https://github.com/openai/whisper.git
+PyPDF2
+python-docx
